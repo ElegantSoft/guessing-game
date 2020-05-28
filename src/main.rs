@@ -1,9 +1,13 @@
+mod plus_one;
+use plus_one::plus_one;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
 fn main() {
     println!("guess the number!");
+    let x = plus_one(5);
+    println!("plus is {}", x);
     let secret_number = rand::thread_rng().gen_range(1, 101);
 
     // println!("secret number is {}", secret_number);
